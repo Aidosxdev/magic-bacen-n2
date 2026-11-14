@@ -1,0 +1,24 @@
+<?php
+// Bu faylni "config.local.php" nomi bilan nusxalang va qiymatlarni to'ldiring.
+// config.local.php ni hech qachon git/ZIP ga qo'shmang. U .htaccess bilan yopilgan.
+return [
+    'debug'                => false,   // true faqat lokal ishlab chiqishda
+    'site_url'             => 'https://magicmanga.uz',
+
+    'db_host'              => 'localhost',
+    'db_name'              => 'magic-manga',
+    'db_user'              => 'magic-manga',
+    'db_pass'              => 'YANGI_PAROLNI_YOZING',
+
+    'google_client_id'     => '',
+    'google_client_secret' => '',
+    'google_redirect_uri'  => 'https://magicmanga.uz/auth/google-callback.php',
+
+    'telegram_bot_token'    => '',
+    'telegram_bot_username' => '',
+
+    // To'lov: true bo'lsa "demo" tugmasi ishlaydi (FAQAT test uchun!)
+    'payment_demo_mode'     => false,
+    // To'lov provayderi webhook imzosi uchun maxfiy kalit
+    'payment_webhook_secret' => '',
+];

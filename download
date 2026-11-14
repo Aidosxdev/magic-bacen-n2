@@ -1,0 +1,11 @@
+# Maxfiy va ichki fayllarni brauzerdan yopish
+<FilesMatch "^(config\.local\.php(\.example)?|\.env|.*\.sql)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
+
+# Yuklangan papkalarda PHP ishlamasin
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(assets/avatars|images/uploads)/.*\.(php|phtml|phar|php[0-9])$ - [F,L]
+</IfModule>
